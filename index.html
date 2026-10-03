@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#191713">
+  <meta name="description" content="给老妈的生日小网站">
+  <title>生日快乐呀，老妈</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23191713'/%3E%3Cpath d='M32 52C13 41 12 25 20 19c6-4 11-1 12 4 2-5 7-8 13-4 8 6 7 22-13 33Z' fill='%23e76742'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="gift-locked">
+  <audio id="bgm" src="assets/beyond.m4a" loop preload="metadata"></audio>
+
+  <button class="sound-toggle" id="soundToggle" type="button" aria-label="暂停背景音乐" hidden>
+    <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i></span>
+    <span id="soundLabel">音乐开着</span>
+  </button>
+
+  <section class="hero" id="top">
+    <div class="hero-grain" aria-hidden="true"></div>
+    <p class="eyebrow">30 / 09 / 2026</p>
+    <div class="hero-copy">
+      <p class="small-note">致亲爱的老妈</p>
+      <h1>生日快乐呀，<br><em>妈咪~</em></h1>
+    </div>
+    <button class="enter-btn" id="enterBtn" type="button">
+      <span>拆开礼物</span>
+      <span aria-hidden="true">↓</span>
+    </button>
+  </section>
+
+  <main id="card" tabindex="-1" inert aria-hidden="true">
+    <section class="album section-dark" id="album">
+      <header class="section-head reveal">
+        <p class="eyebrow">RECENTLY</p>
+        <h2>一些漂亮的剪影喵</h2>
+      </header>
+
+      <div class="scrapbook">
+        <figure class="photo-card hero-photo tilt-left reveal">
+          <span class="tape"></span>
+          <img src="assets/flowers-mom.jpg" alt="老妈站在粉色花丛里笑" loading="lazy">
+          <figcaption>花很多，但还是有你比较抢镜哦哈哈哈</figcaption>
+        </figure>
+
+        <div class="side-note note-one reveal">光线超级好的一张<br><strong>微笑满分好吧</strong></div>
+
+        <figure class="photo-card small-photo tilt-right reveal">
+          <img src="assets/mom-portrait.jpg" alt="夕阳下老妈的笑脸" loading="lazy">
+          <figcaption>本年度光线配合奖</figcaption>
+        </figure>
+
+        <figure class="photo-card wide-photo tilt-left reveal">
+          <span class="film-index">03A</span>
+          <img src="assets/three-of-us.jpg" alt="老妈和两个女儿的合照" loading="lazy">
+          <figcaption>虽然游客照，但依旧貌美</figcaption>
+        </figure>
+
+        <figure class="photo-card portrait-photo tilt-right reveal">
+          <img src="assets/snack.jpg" alt="女儿和老妈一起吃东西" loading="lazy">
+          <figcaption>嚼嚼嚼，好吃好吃</figcaption>
+        </figure>
+
+        <p class="year-stamp reveal">飞吻一个！</p>
+
+        <figure class="photo-card landscape-photo tilt-left reveal">
+          <span class="tape tape-warm"></span>
+          <img src="assets/piano.jpg" alt="老妈坐在钢琴前弹琴" loading="lazy">
+          <figcaption>解锁新技能——piano</figcaption>
+        </figure>
+
+        <figure class="photo-card twin-a tilt-right reveal">
+          <img src="assets/flowers-selfie.jpg" alt="老妈在黄花和郁金香前自拍" loading="lazy">
+          <figcaption>这张靓爆了</figcaption>
+        </figure>
+
+        <figure class="photo-card twin-b tilt-left reveal">
+          <img src="assets/mom-garden.jpg" alt="老妈在园林里合影" loading="lazy">
+          <figcaption>比心love~</figcaption>
+        </figure>
+
+        <figure class="photo-card wide-photo family-shot tilt-right reveal">
+          <img src="assets/family.jpg" alt="一家人围着生日蛋糕合照" loading="lazy">
+          <figcaption>给你，摘一朵好衬衫，信心花舍，特殊为你开铺</figcaption>
+        </figure>
+
+        <div class="quote-card reveal">
+          <p class="lyrics">全个世界<br>几多种<br>爱与爱<br>在互动<br>也未及这种爱<br>能完全贡献</p>
+          <span>— 《全个世界》容祖儿</span>
+        </div>
+
+        <figure class="photo-card portrait-photo tilt-left reveal">
+          <img src="assets/travel-night.jpg" alt="老妈在夜晚的黄鹤楼前合影" loading="lazy">
+          <figcaption>成功托起黄鹤楼</figcaption>
+        </figure>
+        <p class="year-stamp reveal">这个还是太帅了喵</p>
+
+        <figure class="photo-card landscape-photo tilt-right reveal">
+          <img src="assets/cooking.jpg" alt="老妈在厨房做饭" loading="lazy">
+          <figcaption>很漂亮的一张，很幸福的一刻</figcaption>
+        </figure>
+
+        <figure class="photo-card small-photo tilt-left reveal">
+          <img src="assets/selfie.jpg" alt="老妈和女儿的自拍" loading="lazy">
+          <figcaption>黄鹤楼：努力入镜中。</figcaption>
+        </figure>
+        <p class="year-stamp reveal">任世界多宽广，未及在你身旁</p>
+
+
+        <figure class="photo-card hero-photo memory tilt-right reveal">
+          <span class="tape"></span>
+          <img src="assets/childhood.jpg" alt="多年前的一张全家福" loading="lazy">
+          <figcaption>嗯……时间确实过得真快</figcaption>
+        </figure>
+
+        <figure class="photo-card wide-photo tilt-left reveal">
+          <img src="assets/parents.jpg" alt="爸妈坐在公园长椅上" loading="lazy">
+          <figcaption>画册里的璀璨全因你的颜色</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="letter-wrap" id="letter">
+      <div class="letter-intro reveal">
+        <p>emm是有一点老土的一封信来了..</p>
+        <h2>致——<br>亲爱的老妈</h2>
+      </div>
+
+      <article class="letter reveal">
+        <!-- <p class="letter-kicker"></p> -->
+        <p>祝妈咪生日快乐！希望你身体健康，万事顺意，每天都能睡好觉、吃好饭，开开心心地享受退休生活。</p>
+        <p>还有就是，我一直希望你先是李喜华自己，然后才是母亲、老婆，以及其他各种各样的身份。现在退休了，也希望你能多做一点自己真正想做的事情。不管是弹琴、出去玩、和朋友喝茶聊天，还是待在家里看看股票，只要是你喜欢的、让你觉得舒服自在的都好呀。</p>
+        <p>前段时间，我和老姐总劝你多出去玩、多交朋友、多到外面走走。那些理由都很朴素，也很容易想到，所以我就不啰嗦了哈哈，但是前几天和朋友（何px）聊天时，我突然想到：</p>
+        <p>何px 以前去深圳实习的时候，舍友叫她一起去打羽毛球。因为她觉得和那个舍友还不太熟，就推说自己不爱运动（但她高中一直是我的羽毛球搭子哈哈哈）。她爸妈知道以后，就问她：为什么不和舍友多相处一下、多认识一些朋友，找几个上班搭子什么的 🤭</p>
+        <p>然后就发现，“多出去走走”“多交一些朋友”这种听起来非常积极乐观向上，非常阳光开朗的生活方式，可能都是我们认为好的，同时又希望对方都这样，例如我会希望你们多出去走走，多结交朋友之类。</p>
+        <p>emm像何px的妈妈，平时可能也会在家看看股票，但她有很多闺蜜，一有空就约着出去玩。所以何px住均安，但对大良美食的了解比我还多哈哈哈。就像你们也会希望我多交朋友、多出去运动嗯。</p>
+        <p>不过，无论你最后有没有采纳我们的建议，无论你喜欢热热闹闹地出去玩，还是更喜欢按照自己的节奏生活，都由你自己决定。我们真正希望的，还是你能过得自在、舒服，不必为了符合谁心里“更好的生活”而勉强自己。</p>
+        <p>最后的最后，还是希望你每天都能好好睡觉、好好吃饭，少操一点心，多做一点自己喜欢的事情，天天开心、幸福。</p>
+        <footer>
+          <strong>生日快乐啊妈咪！</strong>
+          <span>—— 冯健彤</span>
+        </footer>
+      </article>
+    </section>
+
+    <footer class="ending">
+      <img src="assets/flowers-mom.jpg" alt="老妈在花丛中的照片" loading="lazy">
+      <div class="ending-shade"></div>
+      <div class="ending-copy reveal">
+        <p>ANYWAY,</p>
+        <h2>生日快乐！</h2>
+        <span>新的一岁，少操心，多出去玩。</span>
+        <small>2026.09.30</small>
+      </div>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
